@@ -181,6 +181,7 @@
         if (self.loginManager == nil) {
             self.loginManager = [[FBSDKLoginManager alloc] init];
         }
+        self.loginManager.loginBehavior = FBSDKLoginBehaviorSystemAccount;
         [self.loginManager logInWithReadPermissions:permissions fromViewController:[self topMostController] handler:loginHandler];
         return;
     }
